@@ -48,6 +48,14 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        navList.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+    });
+});
+
 // FAQ Accordion
 const faqItems = document.querySelectorAll('.faq-item');
 
